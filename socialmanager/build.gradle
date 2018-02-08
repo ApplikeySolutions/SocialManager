@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    resourcePrefix 'vv_'
+}
+
+android.buildTypes.debug.manifestPlaceholders = [
+        facebookAppId        : "350727695353170",
+        googleWebClientId    : "973441309503-pgqgph35vi87mpr8lakr1qcfe7j45ujm.apps.googleusercontent.com",
+        twitterConsumerKey   : "hqa38UAsloyBx5eLQqSXv23Vm",
+        twitterConsumerSecret: "XcJdjW06LEU3QvrmXvVtqNDBJ9FhAsE0nm5E4nGIK2KxaDBLm9",
+        instagramClientId    : "0bed00cd259d4f43b95dba4cd8772ee1",
+        instagramClientSecret: "ce3efb44eee5466a8b5b0abca4ebc582",
+        instagramRedirectUri : "https://localhost/oauth2redirect"
+]
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.facebook.android:facebook-android-sdk:4.30.0'
+    compile 'com.google.android.gms:play-services-auth:11.8.0'
+    compile 'com.twitter.sdk.android:twitter-core:3.1.1'
+    compile "io.reactivex.rxjava2:rxjava:2.1.2"
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+}

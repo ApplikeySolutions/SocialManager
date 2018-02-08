@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SocialManager</string>
+    <string name="connect_fb">Facebook</string>
+    <string name="connect_google">Google</string>
+    <string name="connect_twitter">Twitter</string>
+    <string name="connect_ig">Instagram</string>
+    <string name="disconnect">disconnect</string>
+</resources>

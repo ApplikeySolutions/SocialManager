@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        applicationId "com.applikeysolutions.socialmanager"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+android.defaultConfig.manifestPlaceholders = [
+        facebookAppId        : "350727695353170",
+        googleWebClientId    : "973441309503-pgqgph35vi87mpr8lakr1qcfe7j45ujm.apps.googleusercontent.com",
+        twitterConsumerKey   : "r59jTevJfWg6YDGldRGiks8Rl",
+        twitterConsumerSecret: "MQAQtngew0imjGduM3mEbWE1fdUbGOekYEcvm0ybCoJy5FUrju",
+        instagramClientId    : "76bedc2d27dd4e52841e576d4ce8cc79",
+        instagramClientSecret: "28d91eb23ab440beb55b3a3f112f4bb2",
+        instagramRedirectUri : "https://localhost/oauth2redirect"
+]
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation project(':socialmanager')
+}
