@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_com.applikeysolutions.socialmanager.facebookAppId">com.facebook.sdk.ApplicationId</string>
+    <string name="vv_com.applikeysolutions.library.googleWebClientId">com.applikeysolutions.library.googleWebClientId</string>
+    <string name="vv_com.applikeysolutions.library.twitterConsumerKey">com.applikeysolutions.library.twitterConsumerKey</string>
+    <string name="vv_com.applikeysolutions.library.twitterConsumerSecret">com.applikeysolutions.library.twitterConsumerSecret</string>
+    <string name="vv_com.applikeysolutions.library.instagramClientId">com.applikeysolutions.instagramClientId</string>
+    <string name="vv_com.applikeysolutions.library.instagramClientSecret">com.applikeysolutions.instagramClientSecret</string>
+    <string name="vv_com.applikeysolutions.library.instagramRedirectUri">com.applikeysolutions.instagramRedirectUri</string>
+</resources>
