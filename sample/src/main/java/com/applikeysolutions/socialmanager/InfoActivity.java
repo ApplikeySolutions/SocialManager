@@ -17,21 +17,19 @@ import butterknife.OnClick;
 
 public class InfoActivity extends AppCompatActivity {
 
+    private static final String EXTRA_USER = "EXTRA_USER";
+    private static final String EXTRA_TYPE = "EXTRA_TYPE";
     @BindView(R.id.network)
     TextView network;
     @BindView(R.id.userView)
     TextView userView;
     @BindView(R.id.disconnectButton)
     Button disconnectButton;
-
-    private static final String EXTRA_USER = "EXTRA_USER";
-    private static final String EXTRA_TYPE = "EXTRA_TYPE";
-
     private String type;
 
-    public static void start(Context context, String type, NetworklUser socialUser) {
+    public static void start(Context context, String type, NetworklUser networklUser) {
         Intent intent = new Intent(context, InfoActivity.class);
-        intent.putExtra(EXTRA_USER, socialUser);
+        intent.putExtra(EXTRA_USER, networklUser);
         intent.putExtra(EXTRA_TYPE, type);
         context.startActivity(intent);
     }
@@ -42,10 +40,12 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info);
         ButterKnife.bind(this);
 
-        NetworklUser socialUser = getIntent().getParcelableExtra(EXTRA_USER);
-        userView.setText(socialUser.toString());
-        type = getIntent().getStringExtra(EXTRA_TYPE);
-        network.setText(type);
+        if (getIntent().hasExtra(EXTRA_USER)) {
+            NetworklUser networklUser = getIntent().getParcelableExtra(EXTRA_USER);
+            userView.setText(networklUser.toString());
+            type = getIntent().getStringExtra(EXTRA_TYPE);
+            network.setText(type);
+        }
     }
 
     @OnClick(R.id.disconnectButton)

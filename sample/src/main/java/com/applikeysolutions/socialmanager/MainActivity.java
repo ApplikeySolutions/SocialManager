@@ -58,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 .getInstance()
                 .connectFacebook(scopes)
                 .login()
-                .subscribe(user ->
-                                InfoActivity.start(MainActivity.this, FACEBOOK, user),
+                .subscribe(user -> InfoActivity.start(MainActivity.this, FACEBOOK, user),
                         throwable -> showToast(throwable.getMessage()));
 
     }
