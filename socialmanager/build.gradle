@@ -2,6 +2,24 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'me.tatarka.retrolambda'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'socialmanager'
+    publishedGroupId = 'com.github.applikey'
+    libraryName = 'socialmanager'
+    artifact = 'socialmanager'
+    libraryDescription = 'Easy Login in your app with different social networks.'
+    siteUrl = 'https://github.com/AppliKey/SocialManager'
+    gitUrl = 'https://github.com/AppliKey/SocialManager.git'
+    libraryVersion = '1.0.0'
+    developerId = 'vov4ik6181'
+    developerName = 'Vladimir Voronov'
+    developerEmail = 'applikeytester@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 27
     buildToolsVersion "27.0.2"
@@ -47,3 +65,11 @@ dependencies {
     compile "io.reactivex.rxjava2:rxjava:2.1.2"
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 }
+
+repositories {
+    mavenCentral()
+}
+
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
