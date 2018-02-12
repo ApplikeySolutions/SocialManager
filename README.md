@@ -58,8 +58,8 @@ Twitter connection:
                 .getInstance()
                 .connectTwitter()
                 .login()
-                .subscribe(networklUser -> InfoActivity.start(MainActivity.this, TWITTER, networklUser),
-                        throwable -> showToast(throwable.getMessage()));
+                .subscribe(networklUser -> {}),
+                        throwable -> {});
     }
 ```
 Google connection:
@@ -74,8 +74,8 @@ Google connection:
                 .getInstance()
                 .connectGoogle(scopes)
                 .login()
-                .subscribe(networklUser -> InfoActivity.start(MainActivity.this, GOOGLE, networklUser),
-                        throwable -> showToast(throwable.getMessage()));
+                ..subscribe(networklUser -> {}),
+                        throwable -> {});
     }
 ```
 Facebook connection:
@@ -86,8 +86,8 @@ Facebook connection:
                 .getInstance()
                 .connectFacebook(scopes)
                 .login()
-                .subscribe(user -> InfoActivity.start(MainActivity.this, FACEBOOK, user),
-                        throwable -> showToast(throwable.getMessage()));
+                .subscribe(networklUser -> {}),
+                        throwable -> {});
 
     }
 ```
@@ -99,8 +99,8 @@ Instagram connection:
                 .getInstance()
                 .connectInstagram(scopes)
                 .login()
-                .subscribe(networklUser -> InfoActivity.start(this, INSTAGRAM, networklUser),
-                        throwable -> showToast(throwable.getMessage()));
+                .subscribe(networklUser -> {}),
+                        throwable -> {});
     }
 ```
 # Release Notes
