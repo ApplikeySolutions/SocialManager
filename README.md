@@ -7,7 +7,7 @@ Made by [Applikey Solutions](https://applikeysolutions.com)
 1. [Purpose](#purpose)
 2. [Installation](#installation)
 3. [Usage](#usage)
-   * [Configure app level build](#configure-app-level-build)
+   * [Configure app level gradle file](#configure-app-level-gradle-file)
    * [Configure your Application class](#configure-your-application-class)
    * [Networks Connections](#networks-connections)
 4. [Demo](#demo)
@@ -28,7 +28,7 @@ implementation 'com.github.applikey:socialmanager:1.0.0'
 
 # Usage
 
-### Configure app level build:
+### Configure app level gradle file:
 ```groovy
 android.buildTypes.debug.manifestPlaceholders = [
         twitterConsumerKey   : "Set your twitter application consumer key",
