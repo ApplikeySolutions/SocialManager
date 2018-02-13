@@ -28,7 +28,7 @@ implementation 'com.github.applikey:socialmanager:1.0.0'
 
 # Usage
 
-### Configure app level build.gradle:
+### Configure app level build:
 ```groovy
 android.buildTypes.debug.manifestPlaceholders = [
         twitterConsumerKey   : "Set your twitter application consumer key",
