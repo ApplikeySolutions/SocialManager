@@ -3,6 +3,8 @@
 
 Made by [Applikey Solutions](https://applikeysolutions.com)
 
+![Alt text](pictures/social_manager.jpg?raw=true)
+
 # Table of Contents
 1. [Purpose](#purpose)
 2. [Installation](#installation)
