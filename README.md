@@ -28,7 +28,7 @@ implementation 'com.github.applikey:socialmanager:1.0.0'
 
 # Usage
 
-### 1. Configure app level build.gradle:
+### Configure app level build.gradle:
 ```groovy
 android.buildTypes.debug.manifestPlaceholders = [
         twitterConsumerKey   : "Set your twitter application consumer key",
@@ -42,7 +42,7 @@ android.buildTypes.debug.manifestPlaceholders = [
 ```
 If you don't need some social networks, leave fields empty, but don't remove.
 
-### 2. Configure your Application class:
+### Configure your Application class:
 ```java
 public class MyApp extends Application {
     @Override public void onCreate() {
@@ -52,7 +52,7 @@ public class MyApp extends Application {
 }
 ```
 
-### 3. Networks Connections
+### Networks Connections
 
 Twitter connection:
 ```java
